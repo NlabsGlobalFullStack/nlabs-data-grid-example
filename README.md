@@ -127,7 +127,3 @@ gridConfig: GridConfig = {
 ## Katkı
 
 Katkıda bulunmak için lütfen bir fork oluşturun ve pull request gönderin.
-
-## Lisans
-
-MIT
