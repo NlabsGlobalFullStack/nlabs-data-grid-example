@@ -1,0 +1,58 @@
+<!-- Flexi Data Grid Demo - With Dynamic Column Definition -->
+
+<div class="demo-container">
+  <main class="demo-main">
+
+    <section class="demo-section">
+      <nlabs-data-grid
+      [data]="data()"
+       [config]="gridConfig" 
+       [totalRecords]="totalRecords()" 
+       [adapter]="dataAdapter"
+       [autoLoad]="true" 
+       [lazy]="false" 
+       [theme]="'dark'" 
+       [showThemeSelector]="true" 
+       [showColumnChooser]="true"
+       [showGlobalSearch]="false" 
+       [showAddButton]="true" 
+       [addButtonText]="'Yeni Kullanıcı Ekle'" 
+       [showExport]="false"
+       [exportFileName]="'users-export'" 
+       [showFooter]="true" 
+       (dataLoad)="onDataLoad($event)"
+       (rowSelect)="onRowSelect($event)" 
+       (stateChange)="onStateChange($event)" 
+       (addClick)="onAddNewUser()"
+       (excelExport)="onExcelExport($event)" 
+       (pdfExport)="onPdfExport($event)">
+
+
+        <!-- Actions Column Template Buttons -->
+        <ng-template nlabsGridColumnCommandTemplate="actions" let-row>
+          <button class="btn-edit" (click)="onEditUser(row)" title="Düzenle">
+            ✏️ Edit
+          </button>
+          <button class="btn-delete" (click)="onDeleteUser(row)" title="Sil">
+            🗑️ Delete
+          </button>
+        </ng-template>
+
+        <!-- Custom Footer Template -->
+        <ng-template nlabsGridFooterTemplate let-data let-total="total">
+          <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+            <div style="font-size: 14px; font-weight: 600;">
+              📊 Total Records: <strong style="color: #4096ff;">{{ total }}</strong>
+            </div>
+            <div style="font-size: 13px; color: #666;">
+              💼 Showing {{ data.length }} items on this page
+            </div>
+            <div style="font-size: 13px;">
+              <span style="color: #52c41a; font-weight: 500;">✓ Data loaded successfully</span>
+            </div>
+          </div>
+        </ng-template>
+      </nlabs-data-grid>
+    </section>
+  </main>
+</div>
