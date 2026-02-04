@@ -1,0 +1,173 @@
+.home-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.page-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 16px;
+}
+
+.page-header p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #1a1a2e;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.demo-links {
+  margin-bottom: 48px;
+}
+
+.demo-links h2, .tech-info h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 24px;
+  color: #1a1a2e;
+}
+
+.link-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.link-card.odata:hover {
+  border-color: #667eea;
+}
+
+.link-card.rest:hover {
+  border-color: #10b981;
+}
+
+.card-icon {
+  font-size: 48px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: #1a1a2e;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 8px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.link-card.odata .badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.link-card.rest .badge {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #fff;
+}
+
+.tech-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.tech-badge.angular {
+  background: linear-gradient(135deg, #dd0031 0%, #c3002f 100%);
+}
+
+.tech-badge.dotnet {
+  background: linear-gradient(135deg, #512bd4 0%, #7c3aed 100%);
+}
+
+.tech-badge.odata {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.tech-badge.ts {
+  background: linear-gradient(135deg, #3178c6 0%, #235a97 100%);
+}

@@ -1,0 +1,100 @@
+.page-container {
+  max-width: 100%;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #1a1a2e;
+}
+
+.header-desc {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.adapter-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.adapter-badge.odata {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.grid-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.info-section {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.info-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: #1a1a2e;
+}
+
+.info-section code {
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 13px;
+  background: #1a1a2e;
+  color: #10b981;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: block;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: all 0.2s ease;
+}
+
+.action-btn.edit {
+  background: #667eea;
+  color: #fff;
+}
+
+.action-btn.edit:hover {
+  background: #5a67d8;
+}
+
+.action-btn.delete {
+  background: #ef4444;
+  color: #fff;
+}
+
+.action-btn.delete:hover {
+  background: #dc2626;
+}

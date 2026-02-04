@@ -1,0 +1,48 @@
+<div class="page-container">
+  <header class="page-header">
+    <div class="header-content">
+      <h1>Orders</h1>
+      <span class="adapter-badge rest">REST Adapter</span>
+    </div>
+    <p class="header-desc">Order management with REST API backend integration - Use the search box in the grid to filter orders</p>
+  </header>
+
+  <!-- Selected Order Info -->
+  @if (selectedOrder) {
+    <div class="selected-info">
+      <h3>Selected Order</h3>
+      <div class="selected-details">
+        <span class="detail-item"><strong>Order:</strong> {{ selectedOrder.orderNumber }}</span>
+        <span class="detail-item"><strong>Customer:</strong> {{ selectedOrder.customerName }}</span>
+        <span class="detail-item"><strong>Status:</strong> {{ selectedOrder.status }}</span>
+        <span class="detail-item"><strong>Total:</strong> {{ '$' + selectedOrder.totalAmount.toLocaleString('en-US', { minimumFractionDigits: 2 }) }}</span>
+      </div>
+    </div>
+  }
+
+  <div class="grid-container">
+    <nlabs-data-grid
+      [config]="gridConfig"
+      [adapter]="dataAdapter"
+      [autoLoad]="true"
+      [lazy]="true"
+      [theme]="'dark'"
+      [showThemeSelector]="true"
+      [showColumnChooser]="true"
+      [showGlobalSearch]="true"
+      [showExport]="true"
+      (rowSelect)="onRowSelect($event)"
+      (rowUnselect)="onRowUnselect($event)"
+    >
+      <ng-template nlabsGridColumnCommandTemplate="actions" let-row>
+        <button class="action-btn view" (click)="onView(row)">View</button>
+        <button class="action-btn edit" (click)="onEdit(row)">Edit</button>
+      </ng-template>
+    </nlabs-data-grid>
+  </div>
+
+  <div class="info-section">
+    <h3>REST API Endpoint</h3>
+    <code>GET /api/orders?skip=0&pageSize=10&customerName=John&startDate=2024-01-01</code>
+  </div>
+</div>

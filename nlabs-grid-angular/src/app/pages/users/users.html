@@ -1,0 +1,37 @@
+<div class="page-container">
+  <header class="page-header">
+    <div class="header-content">
+      <h1>Users</h1>
+      <span class="adapter-badge odata">OData Adapter</span>
+    </div>
+    <p class="header-desc">User management with OData backend integration</p>
+  </header>
+
+  <div class="grid-container">
+    <nlabs-data-grid
+      [config]="gridConfig"
+      [adapter]="dataAdapter"
+      [autoLoad]="true"
+      [lazy]="true"
+      [theme]="'light'"
+      [showThemeSelector]="true"
+      [showColumnChooser]="true"
+      [showGlobalSearch]="true"
+      [showAddButton]="true"
+      [addButtonText]="'Add User'"
+      [showExport]="true"
+      (addClick)="onAddUser()"
+      (excelExport)="onExport($event)"
+    >
+      <ng-template nlabsGridColumnCommandTemplate="actions" let-row>
+        <button class="action-btn edit" (click)="onEdit(row)">Edit</button>
+        <button class="action-btn delete" (click)="onDelete(row)">Delete</button>
+      </ng-template>
+    </nlabs-data-grid>
+  </div>
+
+  <div class="info-section">
+    <h3>OData Endpoint</h3>
+    <code>GET /odata/Users?$top=10&$skip=0&$count=true&$orderby=name</code>
+  </div>
+</div>

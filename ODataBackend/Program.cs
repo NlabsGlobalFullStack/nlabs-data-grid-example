@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OData.ModelBuilder;
 using ODataBackend.Data;
+using ODataBackend.Endpoints;
 using ODataBackend.Models;
 using System.Text.Json;
 
@@ -10,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Configure OData
 var modelBuilder = new ODataConventionModelBuilder();
 modelBuilder.EntitySet<User>("Users");
+modelBuilder.EntitySet<Order>("Orders");
+modelBuilder.EntitySet<OrderDetail>("OrderDetails");
 
 // Add services
 builder.Services.AddDbContext<UserContext>(options =>
@@ -66,5 +69,14 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowAngular");
 app.UseRouting();
 app.MapControllers();
+
+// ============================================
+// Minimal API Endpoints (REST)
+// Endpoints are organized in separate files:
+// - Endpoints/OrderEndpoints.cs
+// - Endpoints/OrderDetailEndpoints.cs
+// ============================================
+app.MapOrderEndpoints();
+app.MapOrderDetailEndpoints();
 
 app.Run();

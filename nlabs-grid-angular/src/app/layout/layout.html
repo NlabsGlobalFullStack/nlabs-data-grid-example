@@ -1,0 +1,36 @@
+<div class="app-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h1 class="logo">nlabs-grid</h1>
+          <span class="version">v1.0.1</span>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a routerLink="/home" routerLinkActive="active" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-text">Home</span>
+          </a>
+          <a routerLink="/users" routerLinkActive="active" class="nav-item">
+            <span class="nav-icon">👥</span>
+            <span class="nav-text">Users (OData)</span>
+          </a>
+          <a routerLink="/orders" routerLinkActive="active" class="nav-item">
+            <span class="nav-icon">📦</span>
+            <span class="nav-text">Orders (REST)</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="tech-stack">
+            <span>Angular 21</span>
+            <span>ASP.NET Core</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <router-outlet />
+      </main>
+    </div>
