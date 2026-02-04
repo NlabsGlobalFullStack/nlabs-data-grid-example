@@ -1,10 +1,10 @@
 # nlabs-data-grid-example
 
-This repository contains two separate Angular projects for demonstrating and developing the **nlabs-grid** component library.
+This repository contains two separate Angular projects for demonstrating and developing the **@nlabtech/nlabs-grid** component library.
 
 ## Package Links
 
-- **NPM Package**: [https://www.npmjs.com/package/nlabs-grid](https://www.npmjs.com/package/nlabs-grid)
+- **NPM Package**: [https://www.npmjs.com/package/@nlabtech/nlabs-grid](https://www.npmjs.com/package/@nlabtech/nlabs-grid)
 - **GitHub Repository (Library)**: [https://github.com/NlabsNpmPackages/nlabs-grid](https://github.com/NlabsNpmPackages/nlabs-grid)
 - **GitHub Repository (Angular Examples)**: [https://github.com/nlabsGlobalAngular/nlabs-grid](https://github.com/nlabsGlobalAngular/nlabs-grid)
 
